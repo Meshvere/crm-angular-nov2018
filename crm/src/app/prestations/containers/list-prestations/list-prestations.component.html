@@ -1,0 +1,27 @@
+<div class="table-responsive">
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+        <th scope="col">Client</th>
+        <th scope="col">NB Jours</th>
+        <th scope="col">TJM HT</th>
+        <th scope="col">Total HT</th>
+        <th scope="col">Total TTC</th>
+        <th scope="col">Statut</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of collection">
+        <th scope="row">{{item.id}}</th>
+        <td>{{item.typePresta}}</td>
+        <td>{{item.client}}</td>
+        <td>{{item.nbJour}}</td>
+        <td>{{item.tjmHt}}</td>
+        <td>{{item.totalHt() | currency:'EUR'}}</td>
+        <td>{{item.totalTtc() | currency:'EUR'}}</td>
+        <td>{{item.state}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

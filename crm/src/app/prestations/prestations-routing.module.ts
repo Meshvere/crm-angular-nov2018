@@ -18,4 +18,4 @@ const appRoutes: Routes = [
     )
   ]
 })
-export class PrestationsRooutingModule { }
+export class PrestationsRoutingModule { }
