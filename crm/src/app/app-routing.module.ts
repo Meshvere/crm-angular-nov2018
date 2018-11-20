@@ -9,10 +9,10 @@ const appRoutes: Routes = [
     path: 'prestations',
     loadChildren: './prestations/prestations.module#PrestationsModule', // <= Charge un module en lazy loading
   },
-  {
-    path: 'clients',
-    loadChildren: './clients/clients.module#ClientsModule', // <= Charge un module en lazy loading
-  },
+  // {
+  //   path: 'clients',
+  //   loadChildren: './clients/clients.module#ClientsModule', // <= Charge un module en lazy loading
+  // },
 
   { path: '',
     redirectTo: '/login',
@@ -26,7 +26,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: false, // <-- debugging purposes only
-      preloadingStrategy: PreloadAllModules}
+      preloadingStrategy: PreloadAllModules
+    }
     )
   ]
 })
