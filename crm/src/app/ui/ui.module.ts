@@ -6,10 +6,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavComponent } from './components/nav/nav.component';
 import { UiComponent } from './user-interface/ui/ui.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
-  declarations: [UiComponent, FooterComponent, HeaderComponent, NavComponent, PageNotFoundComponent],
+  declarations: [UiComponent, FooterComponent, HeaderComponent, NavComponent],
   exports: [UiComponent],
   imports: [
     CommonModule,

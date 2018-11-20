@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { PrestationsModule } from './prestations.module';
+import { RouterModule, Routes } from '@angular/router';
 import { PagePrestationsComponent } from './pages/page-prestations/page-prestations.component';
-import { Routes, RouterModule } from '@angular/router';
 
 const appRoutes: Routes = [
   { path: '', component: PagePrestationsComponent },

@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, Router, RouterModule, Routes } from '@angular/router';
 import { PageLoginComponent } from './login/pages/page-login/page-login.component';
-import { PageNotFoundComponent } from './ui/components/page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
   { path: 'login', component: PageLoginComponent },
@@ -9,16 +8,16 @@ const appRoutes: Routes = [
     path: 'prestations',
     loadChildren: './prestations/prestations.module#PrestationsModule', // <= Charge un module en lazy loading
   },
-  // {
-  //   path: 'clients',
-  //   loadChildren: './clients/clients.module#ClientsModule', // <= Charge un module en lazy loading
-  // },
+  {
+    path: 'clients',
+    loadChildren: './clients/clients.module#ClientsModule', // <= Charge un module en lazy loading
+  },
 
   { path: '',
     redirectTo: '/login',
     pathMatch: 'full'
   }, // <= route par défaut
-  { path: '**', component: PageNotFoundComponent } // <= 404 not found
+  { path: '**', loadChildren: './page-not-found/page-not-found.module#PageNotFoundModule', } // <= 404 not found
 ];
 
 @NgModule({
@@ -26,7 +25,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: false, // <-- debugging purposes only
-      preloadingStrategy: PreloadAllModules
+      // preloadingStrategy: PreloadAllModules
     }
     )
   ]
