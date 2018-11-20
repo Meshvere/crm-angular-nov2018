@@ -1,0 +1,10 @@
+<tr>
+  <th scope="row">{{item.id}}</th>
+  <td>{{item.typePresta}}</td>
+  <td>{{item.client}}</td>
+  <td>{{item.nbJour}}</td>
+  <td>{{item.tjmHt}}</td>
+  <td>{{item | total | currency:'EUR'}}</td>
+  <td>{{item | total: item.tauxTva | currency:'EUR'}}</td>
+  <td>{{item.state}}</td>
+</tr>
