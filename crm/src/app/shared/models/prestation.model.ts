@@ -17,10 +17,14 @@ export class Prestation implements PrestationsI {
   }
 
   totalHt()  {
+    // console.log('totalHT');
+
     return this.nbJour * this.tjmHt;
   }
 
   totalTtc(tva?: number)  {
+    // console.log('totalTTC');
+
     if (!tva) {
       tva = this.tauxTva;
     }
