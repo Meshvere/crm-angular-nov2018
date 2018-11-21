@@ -24,7 +24,7 @@ registerLocaleData(localeFr);
     AppRoutingModule
   ],
   // services
-  providers: [{ provide: LOCALE_ID, useValue: 'fr-FR' }],
+  providers: [{ provide: LOCALE_ID, useValue: 'fr' }],
   // quel component sera chargé à l'init de l'app
   bootstrap: [AppComponent]
 })
