@@ -1,12 +1,3 @@
-<div class="table-responsive">
-  <table class="table table-striped table-hover">
-    <thead>
-      <tr>
-        <th scope="col" *ngFor="let item of headers">{{item}}</th>
-      </tr>
-    </thead>
-    <tbody>
-      <app-prestation *ngFor="let item of collection" [item]="item"></app-prestation>
-    </tbody>
-  </table>
-</div>
+<app-tableau [headers]="headers">
+    <app-prestation *ngFor="let item of collection" [item]="item"></app-prestation>
+</app-tableau>
