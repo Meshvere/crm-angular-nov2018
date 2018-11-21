@@ -27,9 +27,15 @@ aside {
   }
 }
 
-.close-aside aside {
-  width: 0;
-  overflow: hidden;
+.close-aside {
+  aside {
+    width: 0;
+    overflow: hidden;
+  }
+
+  .shadow {
+    display: none;
+  }
 }
 
 .shadow {
@@ -62,9 +68,10 @@ footer {
     margin-left: $sidenav-width;
   }
 
-  .close-aside .contents,
-  .close-aside footer {
+  .close-aside {
+    .contents, footer {
     margin-left: 0;
   }
+}
 
 }
