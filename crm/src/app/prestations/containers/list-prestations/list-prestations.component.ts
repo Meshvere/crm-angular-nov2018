@@ -14,7 +14,7 @@ export class ListPrestationsComponent implements OnInit {
 
   ngOnInit() {
     this.collection = this.ps.collection;
-    this.headers = ['Type', 'Client', 'NB jours', 'TJM HT', 'Total HT', 'Total TTC', 'Statut'];
+    this.headers = ['ID', 'Type', 'Client', 'NB jours', 'TJM HT', 'Total HT', 'Total TTC', 'Statut'];
   }
 
 }

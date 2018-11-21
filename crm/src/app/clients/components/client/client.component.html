@@ -1,0 +1,10 @@
+<tr>
+  <th>{{ item.id }}</th>
+  <td>{{ item.nom }}</td>
+  <td><a href="mailto:{{item.email}}">{{item.email}}</a></td>
+  <td [appActif]="item.actif">
+    <select (change)="changeEtat($event)">
+      <option *ngFor="let etat of this.etat" [value]="etat" [selected]="item.actif === etat">{{etat}}</option>
+    </select>
+  </td>
+</tr>
