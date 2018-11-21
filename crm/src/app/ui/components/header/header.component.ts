@@ -11,10 +11,13 @@ export class HeaderComponent implements OnInit {
   public faBars = faBars;
   public faUser = faUser;
 
+  public open: boolean;
+
   constructor() { }
 
   ngOnInit() {
-    this.title = 'App de formation Angular';
+    this.open = true;
+    this.title = 'App formation';
   }
 
 }
