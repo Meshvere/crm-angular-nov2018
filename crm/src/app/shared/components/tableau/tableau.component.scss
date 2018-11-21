@@ -22,3 +22,25 @@
   }
 
 }
+
+app-template-a {
+  app-tableau {
+    thead {
+      tr {
+        background: $dark-color;
+        color: $light-color;
+      }
+    }
+  }
+}
+
+app-template-b {
+  app-tableau {
+    thead {
+      tr {
+        background: $palette-color-one;
+        color: $light-color;
+      }
+    }
+  }
+}
