@@ -7,4 +7,5 @@
       <option *ngFor="let etat of this.etat" [value]="etat" [selected]="item.actif === etat">{{etat}}</option>
     </select>
   </td>
+  <td><fa-icon [icon]="faTrash" (click)="delete()"></fa-icon></td>
 </tr>

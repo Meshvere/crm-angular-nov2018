@@ -1,6 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Client } from 'src/app/shared/models/client.model';
+import { Component, Input, OnInit } from '@angular/core';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { Actif } from 'src/app/shared/enums/actif.enum';
+import { Client } from 'src/app/shared/models/client.model';
 import { ClientsService } from '../../services/clients.service';
 
 @Component({
@@ -11,6 +12,7 @@ import { ClientsService } from '../../services/clients.service';
 export class ClientComponent implements OnInit {
   @Input() item: Client;
   public etat: String[];
+  public faTrash = faTrash;
 
   constructor(private cs: ClientsService) { }
 
@@ -22,5 +24,11 @@ export class ClientComponent implements OnInit {
     const state = evt.target.value;
 
     this.cs.update(this.item, state);
+  }
+
+  delete() {
+    this.cs.delete(this.item).then(() => {
+      alert('Client supprimé');
+    });
   }
 }

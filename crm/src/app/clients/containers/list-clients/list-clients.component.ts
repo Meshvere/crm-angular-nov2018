@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./list-clients.component.scss']
 })
 export class ListClientsComponent implements OnInit {
-  public headers: String[] = ['ID', 'Nom', 'Email', 'Actif ?'];
+  public headers: String[] = ['ID', 'Nom', 'Email', 'Actif ?', 'Supprimer'];
   public collection$: Observable<Client[]>;
   constructor(public cs: ClientsService) { }
 

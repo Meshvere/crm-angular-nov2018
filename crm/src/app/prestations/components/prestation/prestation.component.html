@@ -11,4 +11,5 @@
       <option *ngFor="let curState of states" [value]="curState">{{ curState }}</option>
     </select>
   </td>
+  <td><fa-icon [icon]="faTrash" (click)="this.delete()"></fa-icon></td>
 </tr>
