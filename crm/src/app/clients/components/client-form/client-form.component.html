@@ -1,0 +1,24 @@
+<div class="container">
+  <form novalidate [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="nom">Nom</label>
+      <input type="text" class="form-control" id="nom" name="nom" formControlName="nom" />
+      <div class="alert alert-danger" *ngIf="isError('nom')">Requis</div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">email</label>
+      <input type="text" class="form-control" id="email" name="email" formControlName="email" />
+      <div class="alert alert-danger" *ngIf="isError('email')">Requis</div>
+    </div>
+
+    <div class="form-group">
+      <label for="actif">Actif</label>
+      <select class="form-control" id="actif" name="actif" formControlName="actif">
+        <option *ngFor="let actif of actifs" [value]="actif">{{actif}}</option>
+      </select>
+    </div>
+
+    <button [disabled]="form.invalid" type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

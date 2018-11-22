@@ -25,4 +25,8 @@ export class ClientsService {
   public update(item: Client, newEtat: Actif) {
     item.actif = newEtat;
   }
+
+  public add(item: Client) {
+    this.collection.push(new Client(item));
+  }
 }

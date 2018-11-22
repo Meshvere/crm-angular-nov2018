@@ -1,9 +1,7 @@
 <div class="container">
-    <!-- le ngForm permet d'initialiser un formGroup ici -->
     <form novalidate [formGroup]="form" (ngSubmit)="onSubmit()">
       <div class="form-group">
         <label for="type">Type</label>
-        <!-- two way data binding: permet de faire du data binding ET de l'event binding, d'où les crochets (data) suivis de parenthèses (event)-->
         <input type="text" class="form-control" id="type" formControlName="typePresta"/>
         <div class="alert alert-danger" *ngIf="isError('typePresta')">Requis</div>
       </div>
