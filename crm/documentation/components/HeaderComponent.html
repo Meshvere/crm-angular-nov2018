@@ -135,6 +135,10 @@
                             </li>
                             <li>
                                     <span class="modifier">Public</span>
+                                <a href="#faTimes">faTimes</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
                                 <a href="#faUser">faUser</a>
                             </li>
                             <li>
@@ -183,7 +187,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/ui/components/header/header.component.ts:14</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/ui/components/header/header.component.ts:15</a></div>
                             </td>
                         </tr>
 
@@ -222,7 +226,7 @@
 
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/ui/components/header/header.component.ts:18</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/ui/components/header/header.component.ts:19</a></div>
                             </td>
                         </tr>
 
@@ -273,6 +277,40 @@
                         <tr>
                             <td class="col-md-4">
                                     <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/ui/components/header/header.component.ts:11</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="faTimes"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            faTimes
+                            </b>
+                            <a href="#faTimes"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>faTimes:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>faTimes</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/ui/components/header/header.component.ts:13</a></div>
                             </td>
                         </tr>
 
@@ -341,7 +379,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/ui/components/header/header.component.ts:14</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/ui/components/header/header.component.ts:15</a></div>
                             </td>
                         </tr>
 
@@ -390,7 +428,7 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
-import { faBars, faUser } from &#x27;@fortawesome/free-solid-svg-icons&#x27;;
+import { faBars, faTimes, faUser } from &#x27;@fortawesome/free-solid-svg-icons&#x27;;
 
 @Component({
   selector: &#x27;app-header&#x27;,
@@ -401,6 +439,7 @@ export class HeaderComponent implements OnInit {
   public title: string;
   public faBars &#x3D; faBars;
   public faUser &#x3D; faUser;
+  public faTimes &#x3D; faTimes;
 
   public open: boolean;
 
@@ -420,7 +459,7 @@ export class HeaderComponent implements OnInit {
 
     &lt;div&gt;
       &lt;span (click)&#x3D;&quot;open &#x3D; !open&quot; [ngClass]&#x3D;&quot;{&#x27;active&#x27;: open}&quot;&gt;
-        &lt;fa-icon [icon]&#x3D;&quot;faBars&quot;&gt;&lt;/fa-icon&gt;
+        &lt;fa-icon [icon]&#x3D;&quot;open?faTimes:faBars&quot;&gt;&lt;/fa-icon&gt;
       &lt;/span&gt;
     &lt;/div&gt;
 
@@ -487,8 +526,8 @@ export class HeaderComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="d-flex align-items-center header">    <div>      <span (click)="open = !open" [ngClass]="{\'active\': open}">        <fa-icon [icon]="faBars"></fa-icon>      </span>    </div>    <div class="title flex-grow-1 text-center">      <h1>{{ title }}</h1>    </div>    <div>      <span>          <fa-icon [icon]="faUser"></fa-icon>      </span>    </div>  </div></div>'
-    var COMPONENTS = [{'name': 'AddRowComponent', 'selector': 'app-add-row'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ClientComponent', 'selector': 'app-client'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'ListClientsComponent', 'selector': 'app-list-clients'},{'name': 'ListPrestationsComponent', 'selector': 'app-list-prestations'},{'name': 'NavComponent', 'selector': 'app-nav'},{'name': 'PageAddClientComponent', 'selector': 'app-page-add-client'},{'name': 'PageAddPrestationComponent', 'selector': 'app-page-add-prestation'},{'name': 'PageClientsComponent', 'selector': 'app-page-clients'},{'name': 'PageLoginComponent', 'selector': 'app-page-login'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'PagePrestationsComponent', 'selector': 'app-page-prestations'},{'name': 'PrestationComponent', 'selector': 'app-prestation'},{'name': 'TableauComponent', 'selector': 'app-tableau'},{'name': 'TemplateAComponent', 'selector': 'app-template-a'},{'name': 'TemplateBComponent', 'selector': 'app-template-b'},{'name': 'UiComponent', 'selector': 'app-ui'}];
+        var COMPONENT_TEMPLATE = '<div><div class="d-flex align-items-center header">    <div>      <span (click)="open = !open" [ngClass]="{\'active\': open}">        <fa-icon [icon]="open?faTimes:faBars"></fa-icon>      </span>    </div>    <div class="title flex-grow-1 text-center">      <h1>{{ title }}</h1>    </div>    <div>      <span>          <fa-icon [icon]="faUser"></fa-icon>      </span>    </div>  </div></div>'
+    var COMPONENTS = [{'name': 'AddClientComponent', 'selector': 'app-add-client'},{'name': 'AddPrestationComponent', 'selector': 'app-add-prestation'},{'name': 'AddRowComponent', 'selector': 'app-add-row'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ClientComponent', 'selector': 'app-client'},{'name': 'ClientFormComponent', 'selector': 'app-client-form'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FormPrestationComponent', 'selector': 'app-form-prestation'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'ListClientsComponent', 'selector': 'app-list-clients'},{'name': 'ListPrestationsComponent', 'selector': 'app-list-prestations'},{'name': 'NavComponent', 'selector': 'app-nav'},{'name': 'PageAddClientComponent', 'selector': 'app-page-add-client'},{'name': 'PageAddPrestationComponent', 'selector': 'app-page-add-prestation'},{'name': 'PageClientsComponent', 'selector': 'app-page-clients'},{'name': 'PageLoginComponent', 'selector': 'app-page-login'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'PagePrestationsComponent', 'selector': 'app-page-prestations'},{'name': 'PrestationComponent', 'selector': 'app-prestation'},{'name': 'ReactiveFormPrestationComponent', 'selector': 'app-reactive-form-prestation'},{'name': 'TableauComponent', 'selector': 'app-tableau'},{'name': 'TemplateAComponent', 'selector': 'app-template-a'},{'name': 'TemplateBComponent', 'selector': 'app-template-b'},{'name': 'UiComponent', 'selector': 'app-ui'}];
     var DIRECTIVES = [{'name': 'ActifDirective', 'selector': '[appActif]'},{'name': 'StateDirective', 'selector': '[appState]'}];
     var ACTUAL_COMPONENT = {'name': 'HeaderComponent'};
 </script>

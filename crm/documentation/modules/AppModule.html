@@ -220,8 +220,11 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { registerLocaleData } from &#x27;@angular/common&#x27;;
 import localeFr from &#x27;@angular/common/locales/fr&#x27;;
 import { LOCALE_ID, NgModule } from &#x27;@angular/core&#x27;;
+import { AngularFireModule } from &#x27;@angular/fire&#x27;;
+import { AngularFirestoreModule } from &#x27;@angular/fire/firestore&#x27;;
 import { BrowserModule } from &#x27;@angular/platform-browser&#x27;;
 import { NgbModule } from &#x27;@ng-bootstrap/ng-bootstrap&#x27;;
+import { environment } from &#x27;../environments/environments.firebase&#x27;;
 import { AppRoutingModule } from &#x27;./app-routing.module&#x27;;
 import { AppComponent } from &#x27;./app.component&#x27;;
 import { LoginModule } from &#x27;./login/login.module&#x27;;
@@ -240,7 +243,9 @@ registerLocaleData(localeFr);
     LoginModule,
     UiModule,
     NgbModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   // services
   providers: [{ provide: LOCALE_ID, useValue: &#x27;fr&#x27; }],

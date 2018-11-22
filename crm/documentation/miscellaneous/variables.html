@@ -63,10 +63,7 @@
                             <a href="#environment" title="src/environments/environment.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(src/.../environment.ts)</a>
                         </li>
                         <li>
-                            <a href="#fakeClients" title="src/app/clients/services/fake-clients.ts"><b>fakeClients</b>&nbsp;&nbsp;&nbsp;(src/.../fake-clients.ts)</a>
-                        </li>
-                        <li>
-                            <a href="#fakePrestations" title="src/app/prestations/services/fake-prestations.ts"><b>fakePrestations</b>&nbsp;&nbsp;&nbsp;(src/.../fake-prestations.ts)</a>
+                            <a href="#environment" title="src/environments/environments.firebase.ts"><b>environment</b>&nbsp;&nbsp;&nbsp;(src/.../environments.firebase.ts)</a>
                         </li>
                     </ul>
                 </td>
@@ -153,81 +150,46 @@
             </tbody>
         </table>
 </section>
-    <h3>src/app/clients/services/fake-clients.ts</h3>
+    <h3>src/environments/environments.firebase.ts</h3>
     <section>
     <h3></h3>        <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="fakeClients"></a>
+                        <a name="environment"></a>
                         <span class="name">
                             <b>
-                            fakeClients
+                            environment
                             </b>
-                            <a href="#fakeClients"><span class="icon ion-ios-link"></span></a>
+                            <a href="#environment"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <code>fakeClients:     <code><a href="../classes/Client.html" target="_self" >Client[]</a></code>
+                        <code>environment:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
 </code>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="../classes/Client.html" target="_self" >Client[]</a></code>
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
 
                         </td>
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <i>Default value : </i><code>[
-  new Client({&#x27;id&#x27;: &#x27;12&#x27;, &#x27;nom&#x27;: &#x27;Tu sors&#x27;, email: &#x27;a@b.fr&#x27;}),
-  new Client({&#x27;id&#x27;: &#x27;666&#x27;, &#x27;nom&#x27;: &#x27;Lui&#x27;, email: &#x27;a@hell.burn&#x27;, actif: Actif.INACTIF})
-]</code>
-                        </td>
-                    </tr>
-
-
-            </tbody>
-        </table>
-</section>
-    <h3>src/app/prestations/services/fake-prestations.ts</h3>
-    <section>
-    <h3></h3>        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="fakePrestations"></a>
-                        <span class="name">
-                            <b>
-                            fakePrestations
-                            </b>
-                            <a href="#fakePrestations"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <code>fakePrestations:     <code><a href="../classes/Prestation.html" target="_self" >Prestation[]</a></code>
-</code>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>    <code><a href="../classes/Prestation.html" target="_self" >Prestation[]</a></code>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Default value : </i><code>[
-    new Prestation({id: &#x27;1&#x27;, typePresta: &#x27;Formation&#x27;, client: &#x27;Modis&#x27;, nbJour: 3, state: State.ANNULE}),
-    new Prestation({id: &#x27;2&#x27;, typePresta: &#x27;Coaching&#x27;, client: &#x27;Nemesys&#x27;}),
-    new Prestation({id: &#x27;666&#x27;, typePresta: &#x27;Gestion&#x27;, client: &#x27;World Company&#x27;, tjmHt: 666.66, state: State.CONFIRME, nbJour: 7}),
-    new Prestation({id: &#x27;7&#x27;, typePresta: &#x27;Déformation&#x27;, client: &#x27;Nemesys&#x27;, tauxTva: 0, nbJour: 1})
-]</code>
+                            <i>Default value : </i><code>{
+  production: true,
+  firebase: {
+    apiKey: &#x27;AIzaSyDEOCxTpv1n1dZMZqxSzRwdCqFsShpVwvQ&#x27;,
+    authDomain: &#x27;crm-formation-angular-d0287.firebaseapp.com&#x27;,
+    databaseURL: &#x27;https://crm-formation-angular-d0287.firebaseio.com&#x27;,
+    projectId: &#x27;crm-formation-angular-d0287&#x27;,
+    storageBucket: &#x27;crm-formation-angular-d0287.appspot.com&#x27;,
+    messagingSenderId: &#x27;997303908062&#x27;
+  }
+}</code>
                         </td>
                     </tr>
 
