@@ -6,3 +6,7 @@
 .invalid  {
   border-color: $palette-color-two;
 }
+
+input[required] {
+  border-left: 4px solid $palette-color-one;
+}
