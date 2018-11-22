@@ -1,0 +1,39 @@
+<div class="container">
+  <!-- le ngForm permet d'initialiser un formGroup ici -->
+  <form novalidate #form="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="type">Type</label>
+      <!-- two way data binding: permet de faire du data binding ET de l'event binding, d'où les crochets (data) suivis de parenthèses (event)-->
+      <input type="text" class="form-control" id="type" name="type" required [(ngModel)]="init.typePresta"/>
+    </div>
+
+    <div class="form-group">
+      <label for="client">Client</label>
+      <input type="text" class="form-control" id="client" name="client" required minlength="3" [(ngModel)]="init.client" />
+    </div>
+
+    <div class="form-group">
+      <label for="nbjour">NB jours</label>
+      <input type="text" class="form-control" id="nbjour" name="nbjour" [(ngModel)]="init.nbJour" />
+    </div>
+
+    <div class="form-group">
+      <label for="tjmht">TJM HT</label>
+      <input type="text" class="form-control" id="tjmht" name="tjmht" [(ngModel)]="init.tjmHt" />
+    </div>
+
+    <div class="form-group">
+      <label for="tva">TVA</label>
+      <input type="text" class="form-control" id="tva" name="tva" [(ngModel)]="init.tauxTva" />
+    </div>
+
+    <div class="form-group">
+      <label for="state">Etat</label>
+      <select class="form-control" id="state" name="state" [(ngModel)]="init.state">
+        <option *ngFor="let state of states" [value]="state">{{state}}</option>
+      </select>
+    </div>
+
+    <button [disabled]="form.invalid" type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
