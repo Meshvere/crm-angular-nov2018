@@ -1,36 +1,43 @@
 import { Injectable } from '@angular/core';
-import { Prestation } from 'src/app/shared/models/prestation.model';
-import { fakePrestations } from './fake-prestations';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { State } from 'src/app/shared/enums/state.enum';
+import { Prestation } from 'src/app/shared/models/prestation.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PrestationsService {
-  constructor() {
-    this.collection = fakePrestations;
+  private itemsCollection: AngularFirestoreCollection<Prestation>;
+  private _collection$: Observable<Prestation[]>;
+
+  constructor(private afs: AngularFirestore) {
+    this.itemsCollection = afs.collection<Prestation>('prestations');
+
+    // Version longue
+    // this.collection$ = this.itemsCollection.valueChanges().pipe(
+    //   map(
+    //     (data) => {
+    //       return data.map(
+    //         (presta) => {
+    //           return new Prestation(presta);
+    //         }
+    //       );
+    //     }
+    //   )
+    // );
+
+    // Version courte
+    this.collection$ = this.itemsCollection.valueChanges().pipe(map(data => data.map(presta => new Prestation(presta))));
   }
 
-  // //java way of life
-  // private collection: Prestation [];
-
-  // public getCollection(): Prestation[] {
-  //   return this.collection;
-  // }
-
-  // public setCollection(col: Prestation[]) {
-  //   this.collection = col;
-  // }
-
-  // Angular way of life
-  private _collection: Prestation[];
-
-  public get collection(): Prestation[] {
-    return this._collection;
+  public get collection$(): Observable<Prestation[]> {
+    return this._collection$;
   }
 
-  public set collection(col: Prestation[]) {
-    this._collection = col;
+  public set collection$(col: Observable<Prestation[]>) {
+    this._collection$ = col;
   }
 
   public update(item: Prestation, newState: State) {
@@ -38,6 +45,6 @@ export class PrestationsService {
   }
 
   public add(item: Prestation) {
-    this.collection.push(new Prestation(item));
+    this.itemsCollection.add(item);
   }
 }
