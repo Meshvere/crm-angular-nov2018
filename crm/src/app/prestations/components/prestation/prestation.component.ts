@@ -20,6 +20,8 @@ export class PrestationComponent implements OnInit {
   changeState(evt) {
     const state = evt.target.value;
 
-    this.ps.update(this.item, state);
+    this.ps.update(this.item, state).then((response) => {
+      this.item.state = state;
+    });
   }
 }
