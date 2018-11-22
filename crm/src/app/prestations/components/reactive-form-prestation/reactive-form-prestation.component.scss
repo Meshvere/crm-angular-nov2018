@@ -1,0 +1,11 @@
+@import '~src/variables';
+
+.ng-touched {
+  &.ng-valid {
+    border-color: darken($palette-color-four, 20);
+  }
+
+  &.ng-invalid {
+    border-color: darken($palette-color-two, 20);
+  }
+}

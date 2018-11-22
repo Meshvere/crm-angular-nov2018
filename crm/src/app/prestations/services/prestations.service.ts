@@ -38,6 +38,6 @@ export class PrestationsService {
   }
 
   public add(item: Prestation) {
-    this.collection.push(item);
+    this.collection.push(new Prestation(item));
   }
 }

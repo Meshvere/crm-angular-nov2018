@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { State } from 'src/app/shared/enums/state.enum';
 import { Prestation } from 'src/app/shared/models/prestation.model';
 
@@ -8,7 +8,6 @@ import { Prestation } from 'src/app/shared/models/prestation.model';
   styleUrls: ['./form-prestation.component.scss']
 })
 export class FormPrestationComponent implements OnInit {
-  @Input() item: Prestation;
   @Output() nitem: EventEmitter<Prestation> = new EventEmitter(); // Importer depuis Angular core
   public init = new Prestation();
 

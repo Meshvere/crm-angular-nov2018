@@ -10,8 +10,9 @@
 
     <div class="form-group">
       <label for="client">Client</label>
-      <input type="text" class="form-control" id="client" name="client" required minlength="3" [(ngModel)]="init.client" />
+      <input type="text" class="form-control" id="client" name="client" required minlength="3" [(ngModel)]="init.client" #client="ngModel"/>
     </div>
+    <div class="alert alert-danger" *ngIf="client.invalid && client.touched">Requis et/ou {{client.errors | json}}</div>
 
     <div class="form-group">
       <label for="nbjour">NB jours</label>
