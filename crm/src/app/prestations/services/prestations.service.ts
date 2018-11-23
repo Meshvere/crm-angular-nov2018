@@ -1,9 +1,10 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {
   AngularFirestore,
   AngularFirestoreCollection
 } from '@angular/fire/firestore';
-import { Observable, BehaviorSubject, Subject } from 'rxjs';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { State } from 'src/app/shared/enums/state.enum';
 import { Prestation } from 'src/app/shared/models/prestation.model';
@@ -18,28 +19,35 @@ export class PrestationsService {
   public curPresta$: BehaviorSubject<Prestation> = new BehaviorSubject(null);
   public clientItem$: Subject<string> = new Subject();
 
-  constructor(private afs: AngularFirestore) {
+  constructor(private afs: AngularFirestore, private http: HttpClient) {
     this.itemsCollection = afs.collection<Prestation>('prestations');
 
     // Version longue
     this.collection$ = this.itemsCollection.valueChanges().pipe(
-      map(
-        (dataFlux) => {
-          this.curPresta$.next(dataFlux[0]);
-          this.clientItem$.next(dataFlux[0].client);
-          return dataFlux.map(
-            (unePresta) => {
-              return new Prestation(unePresta);
-            }
-          );
-        }
-      )
+      map(dataFlux => {
+        this.curPresta$.next(dataFlux[0]);
+        this.clientItem$.next(dataFlux[0].client);
+        return dataFlux.map(unePresta => {
+          return new Prestation(unePresta);
+        });
+      })
     );
 
     // Version courte
     // this.collection$ = this.itemsCollection
     //   .valueChanges()
     //   .pipe(map(dataFlux => dataFlux.map(unePresta => new Prestation(unePresta)))); // Les return sont implicites
+
+    // Version HTTP
+    // this.collection$ = this.http.get<Prestation[]>('urlapi/prestations').pipe(
+    //   map(dataFlux => {
+    //     this.curPresta$.next(dataFlux[0]);
+
+    //     return dataFlux.map(unePresta => {
+    //       return new Prestation(unePresta);
+    //     });
+    //   })
+    // );
   }
 
   public get collection$(): Observable<Prestation[]> {
@@ -59,7 +67,7 @@ export class PrestationsService {
       .catch(e => {
         console.log(e);
       });
-    // return this.http.post('urlapi/prestations', item);
+    // return this.http.post('urlapi/prestations/add', item);
   }
 
   update(item: Prestation, state?: State): Promise<any> {
@@ -73,7 +81,7 @@ export class PrestationsService {
       .catch(e => {
         console.log(e);
       });
-    // return this.http.patch('urlapi/prestations/'+item.id, presta);
+    // return this.http.patch('urlapi/prestations/'+item.id/update, presta);
   }
 
   public delete(item: Prestation): Promise<any> {
@@ -83,7 +91,7 @@ export class PrestationsService {
       .catch(e => {
         console.log(e);
       });
-    // return this.http.delete(`urlapi/prestations/${item.id}`);
+    // return this.http.delete(`urlapi/prestations/${item.id}`); // Ecriture en ES6
   }
 
   getPrestation(id: string): Observable<Prestation> {

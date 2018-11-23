@@ -8,7 +8,7 @@ describe('AppComponent', () => {
         AppComponent
       ],
     }).compileComponents();
-  }));
+  })); // Recompile le Component avant chaque test
 
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);

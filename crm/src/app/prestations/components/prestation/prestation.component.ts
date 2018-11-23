@@ -17,15 +17,21 @@ export class PrestationComponent implements OnInit {
   public faSearch = faSearch;
   public faPen = faPen;
 
-  constructor(private ps: PrestationsService, private router: Router, private ar: ActivatedRoute) { }
+  constructor(
+    private ps: PrestationsService,
+    private router: Router,
+    private ar: ActivatedRoute
+  ) {}
 
   ngOnInit() {
+    console.log(this.ar);
+
   }
 
   changeState(evt) {
     const state = evt.target.value;
 
-    this.ps.update(this.item, state).then((response) => {
+    this.ps.update(this.item, state).then(response => {
       this.item.state = state;
     });
   }
@@ -41,10 +47,8 @@ export class PrestationComponent implements OnInit {
     this.ps.clientItem$.next(this.item.client);
     // console.log(this.ps.curPresta$.value); // dernière valeur stockée par le BehaviorSubject
 
-    this.router.navigate(['details'], {relativeTo: this.ar}); // ajoute details à la route existante
+    this.router.navigate(['details'], { relativeTo: this.ar }); // ajoute details à la route existante
   }
 
-  public edit() {
-
-  }
+  public edit() {}
 }
