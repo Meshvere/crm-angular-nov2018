@@ -6,6 +6,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavComponent } from './components/nav/nav.component';
 import { UiComponent } from './user-interface/ui/ui.component';
+import { PrestationsModule } from '../prestations/prestations.module';
 
 @NgModule({
   declarations: [UiComponent, FooterComponent, HeaderComponent, NavComponent],
@@ -13,7 +14,8 @@ import { UiComponent } from './user-interface/ui/ui.component';
   imports: [
     CommonModule,
     FontAwesomeModule,
-    RouterModule
+    RouterModule,
+    PrestationsModule
   ]
 })
 export class UiModule { }

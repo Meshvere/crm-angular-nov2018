@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { faSearch, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faSearch, faTrash, faPen } from '@fortawesome/free-solid-svg-icons';
 import { State } from 'src/app/shared/enums/state.enum';
 import { Prestation } from 'src/app/shared/models/prestation.model';
 import { PrestationsService } from '../../services/prestations.service';
@@ -15,6 +15,7 @@ export class PrestationComponent implements OnInit {
   public states: string[] = Object.values(State);
   public faTrash = faTrash;
   public faSearch = faSearch;
+  public faPen = faPen;
 
   constructor(private ps: PrestationsService, private router: Router, private ar: ActivatedRoute) { }
 
@@ -37,8 +38,13 @@ export class PrestationComponent implements OnInit {
 
   public detail() {
     this.ps.curPresta$.next(this.item);
-    console.log(this.ps.curPresta$.value); // dernière valeur stockée par le BehaviorSubject
+    this.ps.clientItem$.next(this.item.client);
+    // console.log(this.ps.curPresta$.value); // dernière valeur stockée par le BehaviorSubject
 
     this.router.navigate(['details'], {relativeTo: this.ar}); // ajoute details à la route existante
+  }
+
+  public edit() {
+
   }
 }

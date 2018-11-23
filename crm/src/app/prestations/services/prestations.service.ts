@@ -3,7 +3,7 @@ import {
   AngularFirestore,
   AngularFirestoreCollection
 } from '@angular/fire/firestore';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { Observable, BehaviorSubject, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { State } from 'src/app/shared/enums/state.enum';
 import { Prestation } from 'src/app/shared/models/prestation.model';
@@ -16,6 +16,7 @@ export class PrestationsService {
   private _collection$: Observable<Prestation[]>;
 
   public curPresta$: BehaviorSubject<Prestation> = new BehaviorSubject(null);
+  public clientItem$: Subject<string> = new Subject();
 
   constructor(private afs: AngularFirestore) {
     this.itemsCollection = afs.collection<Prestation>('prestations');
@@ -25,6 +26,7 @@ export class PrestationsService {
       map(
         (dataFlux) => {
           this.curPresta$.next(dataFlux[0]);
+          this.clientItem$.next(dataFlux[0].client);
           return dataFlux.map(
             (unePresta) => {
               return new Prestation(unePresta);

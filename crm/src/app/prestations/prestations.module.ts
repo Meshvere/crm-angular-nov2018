@@ -14,11 +14,13 @@ import { PagePrestationsComponent } from './pages/page-prestations/page-prestati
 import { PrestationsRoutingModule } from './prestations-routing.module';
 import { DetailPrestationComponent } from './components/detail-prestation/detail-prestation.component';
 import { ClientDetailPrestationComponent } from './components/client-detail-prestation/client-detail-prestation.component';
+import { PrestaClientActifComponent } from './components/presta-client-actif/presta-client-actif.component';
 
 @NgModule({
   declarations: [PagePrestationsComponent, ListPrestationsComponent, PrestationComponent,
     PageAddPrestationComponent, AddPrestationComponent, FormPrestationComponent, ReactiveFormPrestationComponent,
-    DetailPrestationComponent, ClientDetailPrestationComponent],
+    DetailPrestationComponent, ClientDetailPrestationComponent, PrestaClientActifComponent],
+    exports: [PrestaClientActifComponent],
   imports: [
     CommonModule,
     PrestationsRoutingModule,

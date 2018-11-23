@@ -12,5 +12,6 @@
     </select>
   </td>
   <td><fa-icon [icon]="faSearch"></fa-icon></td>
+  <td><fa-icon [icon]="faPen" (click)="$event.stopPropagation();this.edit()"></fa-icon></td>
   <td><fa-icon [icon]="faTrash" (click)="$event.stopPropagation();this.delete()"></fa-icon></td><!-- $event.stopPropagation(); Stop le bubbling d'event (remonté d'event)-->
 </tr>
