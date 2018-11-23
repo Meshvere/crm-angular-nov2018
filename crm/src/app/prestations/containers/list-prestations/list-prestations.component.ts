@@ -20,7 +20,7 @@ export class ListPrestationsComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.collection$ = this.ps.collection$;
     // this.sub = this.ps.collection$.subscribe((data) => {this.collection = data; });
-    this.headers = ['ID', 'Type', 'Client', 'NB jours', 'TJM HT', 'Total HT', 'Total TTC', 'Statut', 'Supprimer'];
+    this.headers = ['ID', 'Type', 'Client', 'NB jours', 'TJM HT', 'Total HT', 'Total TTC', 'Statut'];
   }
 
   ngOnDestroy() {

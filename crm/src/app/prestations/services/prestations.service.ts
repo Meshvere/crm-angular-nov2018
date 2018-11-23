@@ -3,7 +3,7 @@ import {
   AngularFirestore,
   AngularFirestoreCollection
 } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { State } from 'src/app/shared/enums/state.enum';
 import { Prestation } from 'src/app/shared/models/prestation.model';
@@ -15,26 +15,29 @@ export class PrestationsService {
   private itemsCollection: AngularFirestoreCollection<Prestation>;
   private _collection$: Observable<Prestation[]>;
 
+  public curPresta$: BehaviorSubject<Prestation> = new BehaviorSubject(null);
+
   constructor(private afs: AngularFirestore) {
     this.itemsCollection = afs.collection<Prestation>('prestations');
 
     // Version longue
-    // this.collection$ = this.itemsCollection.valueChanges().pipe(
-    //   map(
-    //     (data) => {
-    //       return data.map(
-    //         (presta) => {
-    //           return new Prestation(presta);
-    //         }
-    //       );
-    //     }
-    //   )
-    // );
+    this.collection$ = this.itemsCollection.valueChanges().pipe(
+      map(
+        (dataFlux) => {
+          this.curPresta$.next(dataFlux[0]);
+          return dataFlux.map(
+            (unePresta) => {
+              return new Prestation(unePresta);
+            }
+          );
+        }
+      )
+    );
 
     // Version courte
-    this.collection$ = this.itemsCollection
-      .valueChanges()
-      .pipe(map(data => data.map(presta => new Prestation(presta))));
+    // this.collection$ = this.itemsCollection
+    //   .valueChanges()
+    //   .pipe(map(dataFlux => dataFlux.map(unePresta => new Prestation(unePresta)))); // Les return sont implicites
   }
 
   public get collection$(): Observable<Prestation[]> {

@@ -1,4 +1,4 @@
-<tr>
+<tr (click)="this.detail()">
   <th>{{ item.id }}</th>
   <td>{{item.typePresta}}</td>
   <td>{{item.client}}</td>
@@ -7,9 +7,10 @@
   <td>{{item | total | currency:'EUR'}}</td>
   <td>{{item | total: item.tauxTva | currency:'EUR'}}</td>
   <td [appState]="item.state">
-    <select name="state[]" (change)="changeState($event)" [(ngModel)]="item.state">
+    <select name="state[]" (change)="changeState($event)" (click)="$event.stopPropagation();" [(ngModel)]="item.state">
       <option *ngFor="let curState of states" [value]="curState">{{ curState }}</option>
     </select>
   </td>
-  <td><fa-icon [icon]="faTrash" (click)="this.delete()"></fa-icon></td>
+  <td><fa-icon [icon]="faSearch"></fa-icon></td>
+  <td><fa-icon [icon]="faTrash" (click)="$event.stopPropagation();this.delete()"></fa-icon></td><!-- $event.stopPropagation(); Stop le bubbling d'event (remonté d'event)-->
 </tr>

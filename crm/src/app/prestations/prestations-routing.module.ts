@@ -2,9 +2,15 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PageAddPrestationComponent } from './pages/page-add-prestation/page-add-prestation.component';
 import { PagePrestationsComponent } from './pages/page-prestations/page-prestations.component';
+import { DetailPrestationComponent } from './components/detail-prestation/detail-prestation.component';
+import { ClientDetailPrestationComponent } from './components/client-detail-prestation/client-detail-prestation.component';
 
 const appRoutes: Routes = [
-  { path: '', component: PagePrestationsComponent },
+  { path: '', component: PagePrestationsComponent, children: [
+    {path: '', component: DetailPrestationComponent},
+    {path: 'details', component: DetailPrestationComponent},
+    {path: 'client', component: ClientDetailPrestationComponent}
+  ] },
   { path: 'add', component: PageAddPrestationComponent }
 ];
 

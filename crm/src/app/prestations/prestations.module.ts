@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { TemplatesModule } from '../templates/templates.module';
 import { FormPrestationComponent } from './components/form-prestation/form-prestation.component';
@@ -11,10 +12,13 @@ import { ListPrestationsComponent } from './containers/list-prestations/list-pre
 import { PageAddPrestationComponent } from './pages/page-add-prestation/page-add-prestation.component';
 import { PagePrestationsComponent } from './pages/page-prestations/page-prestations.component';
 import { PrestationsRoutingModule } from './prestations-routing.module';
+import { DetailPrestationComponent } from './components/detail-prestation/detail-prestation.component';
+import { ClientDetailPrestationComponent } from './components/client-detail-prestation/client-detail-prestation.component';
 
 @NgModule({
   declarations: [PagePrestationsComponent, ListPrestationsComponent, PrestationComponent,
-    PageAddPrestationComponent, AddPrestationComponent, FormPrestationComponent, ReactiveFormPrestationComponent],
+    PageAddPrestationComponent, AddPrestationComponent, FormPrestationComponent, ReactiveFormPrestationComponent,
+    DetailPrestationComponent, ClientDetailPrestationComponent],
   imports: [
     CommonModule,
     PrestationsRoutingModule,
