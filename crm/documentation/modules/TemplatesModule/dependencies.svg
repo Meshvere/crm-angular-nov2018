@@ -22,69 +22,85 @@
 <text text-anchor="start" x="429.7258" y="-15.4" font-family="sans-serif" font-size="14.00" fill="#000000"> &#160;Exports</text>
 <g id="clust1" class="cluster">
 <title>cluster_TemplatesModule</title>
-<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="75.5,-70 75.5,-268 420.5,-268 420.5,-70 75.5,-70"/>
+<polygon fill="none" stroke="#000000" stroke-dasharray="1,5" points="11,-70 11,-268 485,-268 485,-70 11,-70"/>
 </g>
 <g id="clust2" class="cluster">
 <title>cluster_TemplatesModule_declarations</title>
-<polygon fill="none" stroke="#000000" points="87.5,-78 87.5,-130 409.5,-130 409.5,-78 87.5,-78"/>
+<polygon fill="none" stroke="#000000" points="155,-78 155,-130 477,-130 477,-78 155,-78"/>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_TemplatesModule_imports</title>
+<polygon fill="none" stroke="#000000" points="19,-78 19,-130 147,-130 147,-78 19,-78"/>
 </g>
 <g id="clust6" class="cluster">
 <title>cluster_TemplatesModule_exports</title>
-<polygon fill="none" stroke="#000000" points="83.5,-208 83.5,-260 412.5,-260 412.5,-208 83.5,-208"/>
+<polygon fill="none" stroke="#000000" points="84,-208 84,-260 413,-260 413,-208 84,-208"/>
 </g>
 <!-- TemplateAComponent -->
 <g id="node1" class="node">
 <title>TemplateAComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="401.8075,-122 257.1925,-122 257.1925,-86 401.8075,-86 401.8075,-122"/>
-<text text-anchor="middle" x="329.5" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">TemplateAComponent</text>
+<polygon fill="#ffffb3" stroke="#000000" points="469.3075,-122 324.6925,-122 324.6925,-86 469.3075,-86 469.3075,-122"/>
+<text text-anchor="middle" x="397" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">TemplateAComponent</text>
 </g>
 <!-- TemplatesModule -->
 <g id="node3" class="node">
 <title>TemplatesModule</title>
-<polygon fill="#8dd3c7" stroke="#000000" points="227.3627,-187 224.3627,-191 203.3627,-191 200.3627,-187 109.6373,-187 109.6373,-151 227.3627,-151 227.3627,-187"/>
-<text text-anchor="middle" x="168.5" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">TemplatesModule</text>
+<polygon fill="#8dd3c7" stroke="#000000" points="293.8627,-187 290.8627,-191 269.8627,-191 266.8627,-187 176.1373,-187 176.1373,-151 293.8627,-151 293.8627,-187"/>
+<text text-anchor="middle" x="235" y="-164.8" font-family="Times,serif" font-size="14.00" fill="#000000">TemplatesModule</text>
 </g>
 <!-- TemplateAComponent&#45;&gt;TemplatesModule -->
 <g id="edge1" class="edge">
 <title>TemplateAComponent&#45;&gt;TemplatesModule</title>
-<path fill="none" stroke="#000000" d="M353.5512,-122.0225C353.5512,-139.3734 353.5512,-163 353.5512,-163 353.5512,-163 237.5601,-163 237.5601,-163"/>
-<polygon fill="#000000" stroke="#000000" points="237.5602,-159.5001 227.5601,-163 237.5601,-166.5001 237.5602,-159.5001"/>
+<path fill="none" stroke="#000000" d="M364.875,-122.1061C364.875,-141.3391 364.875,-169 364.875,-169 364.875,-169 304.2366,-169 304.2366,-169"/>
+<polygon fill="#000000" stroke="#000000" points="304.2367,-165.5001 294.2366,-169 304.2366,-172.5001 304.2367,-165.5001"/>
 </g>
 <!-- TemplateBComponent -->
 <g id="node2" class="node">
 <title>TemplateBComponent</title>
-<polygon fill="#ffffb3" stroke="#000000" points="239.0379,-122 95.9621,-122 95.9621,-86 239.0379,-86 239.0379,-122"/>
-<text text-anchor="middle" x="167.5" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">TemplateBComponent</text>
+<polygon fill="#ffffb3" stroke="#000000" points="306.5379,-122 163.4621,-122 163.4621,-86 306.5379,-86 306.5379,-122"/>
+<text text-anchor="middle" x="235" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">TemplateBComponent</text>
 </g>
 <!-- TemplateBComponent&#45;&gt;TemplatesModule -->
 <g id="edge2" class="edge">
 <title>TemplateBComponent&#45;&gt;TemplatesModule</title>
-<path fill="none" stroke="#000000" d="M168.5,-122.1061C168.5,-122.1061 168.5,-140.991 168.5,-140.991"/>
-<polygon fill="#000000" stroke="#000000" points="165.0001,-140.9909 168.5,-150.991 172.0001,-140.991 165.0001,-140.9909"/>
+<path fill="none" stroke="#000000" d="M235,-122.1061C235,-122.1061 235,-140.991 235,-140.991"/>
+<polygon fill="#000000" stroke="#000000" points="231.5001,-140.9909 235,-150.991 238.5001,-140.991 231.5001,-140.9909"/>
 </g>
 <!-- TemplateAComponent  -->
-<g id="node4" class="node">
+<g id="node5" class="node">
 <title>TemplateAComponent </title>
-<polygon fill="#fb8072" stroke="#000000" points="404.3073,-252 256.6927,-252 256.6927,-216 404.3073,-216 404.3073,-252"/>
-<text text-anchor="middle" x="330.5" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">TemplateAComponent </text>
+<polygon fill="#fb8072" stroke="#000000" points="404.8073,-252 257.1927,-252 257.1927,-216 404.8073,-216 404.8073,-252"/>
+<text text-anchor="middle" x="331" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">TemplateAComponent </text>
 </g>
 <!-- TemplatesModule&#45;&gt;TemplateAComponent  -->
-<g id="edge3" class="edge">
+<g id="edge4" class="edge">
 <title>TemplatesModule&#45;&gt;TemplateAComponent </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M227.3734,-175C264.4912,-175 305.4488,-175 305.4488,-175 305.4488,-175 305.4488,-205.9775 305.4488,-205.9775"/>
-<polygon fill="#000000" stroke="#000000" points="301.9489,-205.9774 305.4488,-215.9775 308.9489,-205.9775 301.9489,-205.9774"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M275.5139,-187.1061C275.5139,-187.1061 275.5139,-205.991 275.5139,-205.991"/>
+<polygon fill="#000000" stroke="#000000" points="272.0139,-205.9909 275.5139,-215.991 279.0139,-205.991 272.0139,-205.9909"/>
 </g>
 <!-- TemplateBComponent  -->
-<g id="node5" class="node">
+<g id="node6" class="node">
 <title>TemplateBComponent </title>
-<polygon fill="#fb8072" stroke="#000000" points="239.0372,-252 91.9628,-252 91.9628,-216 239.0372,-216 239.0372,-252"/>
-<text text-anchor="middle" x="165.5" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">TemplateBComponent </text>
+<polygon fill="#fb8072" stroke="#000000" points="239.5372,-252 92.4628,-252 92.4628,-216 239.5372,-216 239.5372,-252"/>
+<text text-anchor="middle" x="166" y="-229.8" font-family="Times,serif" font-size="14.00" fill="#000000">TemplateBComponent </text>
 </g>
 <!-- TemplatesModule&#45;&gt;TemplateBComponent  -->
-<g id="edge4" class="edge">
+<g id="edge5" class="edge">
 <title>TemplatesModule&#45;&gt;TemplateBComponent </title>
-<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M168.5,-187.1061C168.5,-187.1061 168.5,-205.991 168.5,-205.991"/>
-<polygon fill="#000000" stroke="#000000" points="165.0001,-205.9909 168.5,-215.991 172.0001,-205.991 165.0001,-205.9909"/>
+<path fill="none" stroke="#000000" stroke-dasharray="5,2" d="M207.7937,-187.1061C207.7937,-187.1061 207.7937,-205.991 207.7937,-205.991"/>
+<polygon fill="#000000" stroke="#000000" points="204.2937,-205.9909 207.7937,-215.991 211.2937,-205.991 204.2937,-205.9909"/>
+</g>
+<!-- CommonModule -->
+<g id="node4" class="node">
+<title>CommonModule</title>
+<polygon fill="#8dd3c7" stroke="#000000" points="138.6681,-122 135.6681,-126 114.6681,-126 111.6681,-122 27.3319,-122 27.3319,-86 138.6681,-86 138.6681,-122"/>
+<text text-anchor="middle" x="83" y="-99.8" font-family="Times,serif" font-size="14.00" fill="#000000">CommonModule</text>
+</g>
+<!-- CommonModule&#45;&gt;TemplatesModule -->
+<g id="edge3" class="edge">
+<title>CommonModule&#45;&gt;TemplatesModule</title>
+<path fill="none" stroke="#000000" d="M115.6576,-122.1061C115.6576,-141.3391 115.6576,-169 115.6576,-169 115.6576,-169 166.0281,-169 166.0281,-169"/>
+<polygon fill="#000000" stroke="#000000" points="166.0281,-172.5001 176.0281,-169 166.028,-165.5001 166.0281,-172.5001"/>
 </g>
 </g>
 </svg>
