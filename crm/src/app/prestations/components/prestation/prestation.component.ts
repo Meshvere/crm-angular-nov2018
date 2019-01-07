@@ -24,7 +24,6 @@ export class PrestationComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    console.log(this.ar);
 
   }
 
@@ -50,5 +49,7 @@ export class PrestationComponent implements OnInit {
     this.router.navigate(['details'], { relativeTo: this.ar }); // ajoute details à la route existante
   }
 
-  public edit() {}
+  public edit() {
+    this.router.navigate([this.item.id, 'edit'], { relativeTo: this.ar });
+  }
 }
